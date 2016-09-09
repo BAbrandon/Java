@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class IncrementDecrementPanel extends JPanel
+{
+		//	declare constant to be used in program
+	private int INITIAL_NUMBER = 50;
+
+   		// declare variables/controls to
+   		// be used in program
+ private JLabel numberlabel;
+ private JButton incButton, decButton;
+ private int number;
+
+   public IncrementDecrementPanel()
+   {
+      number = INITIAL_NUMBER;
+
+		// create a label showing the number
+      numberlabel = new JLabel (String.valueOf(number));
+
+      	// create two buttons and associate
+      	// their respective listeners
+      incButton = new JButton("Increment");
+      incButton.addActionListener(new IncListener());
+      
+      decButton = new JButton("Decrement");
+      decButton.addActionListener(new DecListener());
+      	// add controls to panel
+      add(decButton);
+      add(numberlabel);
+      add(incButton);
+
+      	// set up size and color of panel
+      setPreferredSize(new Dimension(500, 100));
+      setBackground(Color.cyan);
+      
+   }	// end constructor IncrementDecrementPanel
+
+
+   private class IncListener implements ActionListener
+   {
+      public void actionPerformed (ActionEvent event)
+      {
+    	  	// increment number and display it
+         numberlabel.setText(Integer.toString(++number));
+      }
+   }	// end class IncListener
+
+   
+   private class DecListener implements ActionListener
+   {
+      public void actionPerformed (ActionEvent event)
+      {
+    	  	// decrement number and display it
+    	  numberlabel.setText(Integer.toString(--number));
+      }
+   }	// end class DecListener
+}   // end class IncrementDecrementPanel
