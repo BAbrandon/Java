@@ -1,0 +1,21 @@
+public class MenuModel{
+  ArrayList<String> choices; 
+  private x = 1;
+  public MenuModel(ArrayList<String> c){
+  choices = c;
+  
+  
+}
+  public String getchoice(){
+    return choices[x];
+  }
+  public void moveUp(){
+  x++;
+  }
+  public void moveDown(){
+  x--;
+  }
+  public addChoice(String s){
+  choices.add(s);
+  }
+}

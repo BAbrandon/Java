@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.lang.Object;
+import javax.imageio.ImageIO;
+import java.io.*;
+
+public class Sprite{
+ private String sprite;
+ private int xLoc;
+ private int yLoc;
+ private int width;
+ private int height;
+ 
+  public Sprite(String sprite, int x, int y){
+  this.sprite = sprite;
+  width       = 50;
+  height      = 50;
+  xLoc        = x*width;
+  yLoc        = y*height;
+
+
+  }
+  public boolean canInteract(){
+    return false;
+  }
+  public boolean isBackground(){
+   return false; 
+   }
+  public void interact(Graphics g){
+    if(canInteract()){
+    g.drawRect(100,100,100,100);
+    }
+  }
+  public void draw(Graphics g){
+    try{
+   g.drawImage(ImageIO.read(new File(sprite)),xLoc,yLoc,width,height,null);
+    }catch(Exception e){}
+   }
+}

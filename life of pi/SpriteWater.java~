@@ -1,0 +1,16 @@
+import java.awt.*;
+  public class SpriteWater extends SpriteInter{
+  public SpriteWater(int x, int y){
+   super("water.gif",x,y);
+  }
+  public void interact(Graphics g){
+    g.setColor(Color.gray);
+    g.drawRect(100,100,100,100);
+    g.setColor(Color.black);
+    g.drawRect(110,110,75,75);
+    
+    
+    
+    
+  }
+}

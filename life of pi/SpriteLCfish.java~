@@ -1,0 +1,11 @@
+import java.awt.*;
+public class SpriteLCfish extends SpriteInter{
+  public SpriteLCfish(int x, int y){
+   super("LCfish.gif",x,y);
+  }
+  public void draw(Graphics g){
+  super.draw(g);
+  g.fillRect(500,500,500,500);
+  
+  }
+}
