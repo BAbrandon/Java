@@ -1,0 +1,33 @@
+public class ComputerPlayer extends Player implements Runnable {
+  
+  protected Ball theBall;
+  
+  public ComputerPlayer(Paddle p, int s, Ball b) {
+    super(p,s);
+    theBall  = b;
+    new Thread(this).start();
+  }
+  
+  public void goingUp(boolean moving) {
+  }
+  
+  public void goingDown(boolean moving) {
+  }
+    
+  public void run() {
+    while (true) {
+      int deltaY = theBall.getYLoc() - myPaddle.getYLoc();
+      if (deltaY > maxSpeed)
+        myPaddle.setVelocity(maxSpeed);
+      else if (deltaY * -1 > maxSpeed)
+        myPaddle.setVelocity(-1 * maxSpeed);
+      else
+        myPaddle.setVelocity(deltaY);
+      
+      try {
+        Thread.sleep(20);
+      } catch (Exception e) {}
+    }
+
+  }
+}
