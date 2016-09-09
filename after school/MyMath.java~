@@ -1,0 +1,43 @@
+public class MyMath{
+  static double answer;
+  public static double max(double r, double s){
+    if (r<s)
+      return s;
+      else 
+      return r;
+  }
+  public static double min(double r, double s){
+    if (r>s)
+      return s;
+      else 
+      return r;
+  }
+  public static double floor(double r){
+     double answer = (int)r; 
+     double neg = (int)r-1;
+    if ( r<0)
+      return neg;
+      else
+      return answer;
+  }
+  public static double ceil(double r){  
+     double answer = (int)r+1; 
+     double neg = (int)r+1;
+    if ( r<0)
+      return neg;
+      else
+      return answer;
+    
+  }
+  public static long round(double r){
+    long s, dec;
+      r = s;
+      dec = r - (int)s;
+      answer = s+1;
+      min = s;
+      if (dec>.5)
+        return answer;
+      else 
+        return min;
+  }
+}

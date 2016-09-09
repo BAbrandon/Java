@@ -1,0 +1,5 @@
+import java.swing.Jpanel;
+public class Game extends Jpanel{
+  public Game(){
+  }
+}

@@ -1,0 +1,62 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class HighLowGame {
+
+
+
+public static void main(String[] args) {
+
+boolean done = false;
+
+// for testing, could start out with a random no. however
+double aRandomNo = Math.random();
+
+Scanner Sc = new Scanner(System.in);
+
+while (!done) {
+
+System.out.println("I'm thinking of a number between 1 and 100");
+System.out.print("What do you think it is? ==> ");
+double guess = Double.parseDouble( sc.nextLine() );
+
+double situation = Double.compareTo( aRandomNo );
+// compareTo gives a -1, 0, 1
+if( situation == 0) {
+System.out.println("Correct");
+System.out.println("This game is about over");
+System.out.println("I picked " + aRandomNo);
+System.out.println("And you hauled off and guessed it ... " + guess );
+System.out.println("YOU don't need spare time, you've got HIGH_l-o-o-o-o");
+System.out.print("Would Mr. HiLo Expert like to do this again? [y/n] ==> ");
+String answer = sc.nextLine();
+if( ! answer.equalsIgnoreCase( "n" )) {
+done = false;
+Random r = new Random();
+aRandomNo = r.nextInt(100) + 1;
+System.out.println("A whole NEW number...");
+} else {
+
+done = true;
+System.out.println("Sometimes you win a few. Sometimes you lose a few.");
+System.out.println("Adios, and thanks for all the fish!");
+}
+
+}
+if( situation > 0 ) {
+System.out.println("You are << high >>");
+System.out.println("I understand Kmart has \'Get A Life\' on sale for $14.95");
+
+}
+if( situation < 0 ) {
+System.out.println("Too << low >>");
+System.out.println("Is your resum\u00E9 current with 7/11?");
+}
+}
+}
+
+
+
+
+}
+

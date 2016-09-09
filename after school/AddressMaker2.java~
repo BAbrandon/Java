@@ -1,0 +1,5 @@
+public class AddressMaker2{ 
+  public static void main(String [] args){ 
+    System.out.println("Seguin, TX       78155"); 
+  } 
+} 

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class FlowControl {
+ 
+  public static void main(String[] args) {
+    // I want a scanner object here.
+    Scanner in = new Scanner(System.in);
+    
+    // I want to read in an int here.
+    int x = in;
+    // I want to decide what to print based on the input int.
+  }
+  
+}

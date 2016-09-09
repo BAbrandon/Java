@@ -1,0 +1,8 @@
+import java.awt.*;
+import java.applet.*;
+  public class LineArt extends Applet{
+  public void paint(Graphics g){
+    for (i= 0; i<15; i++){
+      g.drawLine(0,300,300,0)
+  }
+}
